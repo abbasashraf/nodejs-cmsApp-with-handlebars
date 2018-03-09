@@ -14,6 +14,7 @@ const passport = require("passport")
 mongoose.Promise = global.Promise;
 
 
+app.set("port", process.env.PORT || 3000);
 
 mongoose.connect(mongoDbUrl, { useMongoClient: true }).then((db) => {
     console.log("MONGO CONNECTED")
@@ -91,6 +92,9 @@ app.use("/admin/comments", comments);
 const port = process.env.PORT || 4444 
 
 
-app.listen(port, () => {
-    console.log("listening on port 4444")
-})
+// app.listen(port, () => {
+//     console.log("listening on port 4444")
+// })
+app.listen(app.get("port"), function () {
+    console.log("Server run on port " + app.get("port"))
+});
