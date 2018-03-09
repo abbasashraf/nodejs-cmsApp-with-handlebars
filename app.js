@@ -88,9 +88,9 @@ app.use("/admin/comments", comments);
 
 
 
+const port = process.env.PORT || 4444 
 
 
-
-app.listen(4444, () => {
+app.listen(port, () => {
     console.log("listening on port 4444")
 })
