@@ -22,7 +22,6 @@ router.get('/', (req, res) => {
         Category.count().exec(),
         Comment.count().exec()
     ];
-
     Promise.all(promise).then(([postCount, categoryCount, commentCount]) => {
         
         res.render("admin/index", { postCount, categoryCount, commentCount })

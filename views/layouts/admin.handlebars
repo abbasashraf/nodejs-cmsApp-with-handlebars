@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  {{!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> --}}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,10 +15,11 @@
   <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="/css/sb-admin.css" rel="stylesheet">
-    <!-- Custom bootstrap-switch styles for this template-->
+  <!-- Custom bootstrap-switch styles for this template-->
   <link href="/css/bootstrap-switch.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+  <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -39,7 +41,8 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        {{!-- <li class="nav-item dropdown">
+        {{!--
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-fw fa-envelope"></i>
             <span class="d-lg-none">Messages
@@ -130,10 +133,10 @@
             </div>
           </form>
         </li> --}}
-           <li class="nav-item">
-          <div class="nav-link" >
-            <i class="fa fa-user">{{#if user}}  {{user.firstName}}{{/if}}</i>
-            </div>
+        <li class="nav-item">
+          <div class="nav-link">
+            <i class="fa fa-user">{{#if user}} {{user.firstName}}{{/if}}</i>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
@@ -154,8 +157,7 @@
       </ol> --}}
       <div class="row">
         <div class="col-12">
-          {{> home/form-mesgs}}
-           {{{body}}}
+          {{> home/form-mesgs}} {{{body}}}
 
         </div>
       </div>
@@ -163,10 +165,15 @@
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
 
- 
+
   </div>
 
   {{> admin/footer}}
+
+
+
+  {{!-- <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script> --}}
+  
 </body>
 
 </html>

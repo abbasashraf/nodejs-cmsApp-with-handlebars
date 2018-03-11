@@ -17,6 +17,7 @@ router.all('/*',userAuthenticated, (req, res, next) => {
 
 
 router.get('/', (req, res) => {
+    // res.writeHead(200, { 'Content-Type': 'text/html' });
 
     Post.find({})
         .populate('category')
